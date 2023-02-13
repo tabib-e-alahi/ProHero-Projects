@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+    <style>
+        #item-2{
+            border: 3px solid red;
+            
+        }
+        #list-ul{
+            border: 3px solid blue;
+        }
+        #ul-container{
+            border: 3px solid green;
+        }
+        #bubble-body{
+            border: 3px solid rgb(0, 0, 0);
+        }
+        
+    </style>
+</head>
+<body id="bubble-body">
+    <h1>Event Bubble</h1>
+    <section id="ul-container">
+        <ul id="list-ul">
+            <li id="item-1">Lorem, ipsum.</li>
+            <li id="item-2">Est, qui!</li>
+            <li id="item-3">Quidem, nesciunt.</li>
+            <li id="item-4">Assumenda, animi.</li>
+            <li id="item-5">Aut, laborum.</li>
+            <li id="item-6">Rerum, aut!</li>
+        </ul>
+    </section>
+
+    <script>
+        // document.getElementById('item-2').addEventListener('click',function(event){
+        //     console.log('This is ithem number 2');
+        //     event.stopPropagation();
+        // })
+        document.getElementById('item-2').addEventListener('click',function(event){
+            console.log('This is ithem number 2');
+            event.stopImmediatePropagation();
+        })
+        document.getElementById('item-2').addEventListener('click',function(event){
+            console.log('This is 3 ithem number 2');
+            
+        })
+        document.getElementById('item-2').addEventListener('click',function(event){
+            console.log('This is 4 ithem number 2');
+           
+        })
+        document.getElementById('item-2').addEventListener('click',function(event){
+            console.log('This is 5 ithem number 2');
+            
+        })
+
+        document.getElementById('list-ul').addEventListener('click',function(){
+            console.log('ul clicked')
+        })
+        document.getElementById('ul-container').addEventListener('click',function(){
+            console.log('list section clicked');
+        })
+
+        document.getElementById('bubble-body').addEventListener('click',function(){
+            console.log('body clicked')
+        })
+    </script>
+</body>
+</html>

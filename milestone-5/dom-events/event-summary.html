@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- option-1  -->
+    <h3 id="handler-status">Default Text</h3>
+<button onclick="handleOnClick()">Click Here To Change Heading</button> <br> <br>
+
+<!-- ************************************************************* -->
+<!-- option-2 recap -->
+<h3>This is option 2 recap</h3>
+<p id="input-text-display">Default Input Text</p>
+<input id="input-field" type="text">
+<button id="btn-update">Click Here</button>
+
+<script>
+    // option -1
+    function handleOnClick(){
+        const handlerStatus=document.getElementById('handler-status');
+        handlerStatus.innerText='This is the new text';
+    }
+
+    // option-2 recap
+    document.getElementById('btn-update').addEventListener('click',function(){
+        const inputField=document.getElementById('input-field');
+        const inputText=inputField.value;
+        const p=document.getElementById('input-text-display');
+        p.innerText=inputText;
+        inputField='';
+        
+    })
+</script>
+</body>
+</html>

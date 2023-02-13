@@ -1,6 +1,6 @@
 // ***********************************Problem-1 **********************************
 
-//this fuction only take number as a parameter and give us result of an equation which was asked in the problem and also give  an error message if you type anything else except a positive number
+//this function only take number as a parameter and give us result of an equation which was asked in the problem and also give  an error message if you type anything else except a positive number
 
 function mindGame(num){
     if(typeof num=='number' && num > 0){
@@ -9,14 +9,14 @@ function mindGame(num){
         return result;
     }
     else{
-        return 'You must have to type a positve (is greater than Zero) number';
+        return 'You must have to type a positive (is greater than Zero) number';
     }
 }
 
 
 //**************************************Problem-2--********************************
 
-//this funtion always receive only string type parameter and calculate the number of characters. Then give us the output 'Even' and 'Odd', which  depends on the nubers of character are there in that string .If you enter except string with minimum 1 index, it will give you a error messege.
+//this function always receive only string type parameter and calculate the number of characters. Then give us the output 'Even' and 'Odd', which  depends on the numbers of character are there in that string .If you enter except string with minimum 1 index, it will give you a error message.
 
 function evenOdd(text){  
    if(typeof text=='string' && text.length>0){
@@ -42,7 +42,7 @@ function evenOdd(text){
 
 //**************************************Problem-3--***********************************************
 
-//this function take a number as parameter and give us the difference between that number and 7 if the difference is less than 7.Otherwise it will return double of the givven input.
+//this function take a number as parameter and give us the difference between that number and 7 if the difference is less than 7.Otherwise it will return double of the given input.
 
 function isLGSeven(num){
 
@@ -74,19 +74,21 @@ function isLGSeven(num){
 
 // *********************************** Problem-4----***************************************
 
+//this function only take array as parameter (otherwise give error message) and count number of negative index as bad data and return the result. 
+
 function findingBadData(arr){
   //checking array or not  
     if(Array.isArray(arr)==true){
 
-        let count=0;
+        let badData=0;
 
         for(let i=0;i<arr.length;i++){
             if(arr[i]<0){
-                count++;
+                badData++;
             }  
         }
 
-        return count;
+        return badData;
     }
 
     else

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Of DOM</title>
+    <style>
+        h1{
+            color: brown;
+        }
+        li{
+color:rgb(255, 63, 60);
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Dom</h1>
+    <main>
+        <h1>Exploring the dom</h1>
+        <ul>
+            <li>Tabib</li>
+            <li>Alahi</li>
+            <li id="std">Student</li>
+            <li>Tazim</li>
+        </ul>
+
+        <ul>
+            <li>Tabib2</li>
+            <li>Alahi2</li>
+            <li>Student2</li>
+            <li>Tazim2</li>
+        </ul>
+    </main>
+    <script>
+        // getElementsByTagName
+        // const res=document.getElementsByTagName('li');
+        // console.log(res);
+        // for(li of res){
+        //     console.log(li.innerText);
+        // }
+        // getElementsById
+        const result=document.getElementById('std');
+        console.log(result);
+    </script>
+</body>
+</html>
